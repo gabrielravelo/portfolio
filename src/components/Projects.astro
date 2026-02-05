@@ -58,7 +58,7 @@ const PROJECTS = [
     title: "Library Management API - Scalable Backend System",
     description:
       "A robust REST API featuring Role-Based Access Control (RBAC) and JWT authentication. Implements an Event-Driven architecture for asynchronous tasks and automated Excel reporting. Fully dockerized.",
-    // link: "https://svgl.vercel.app/",
+    link: "",
     github: "https://github.com/gabrielravelo/library-management-api",
     image: "/projects/library-management.webp",
     tags: [TAGS.NEST, TAGS.TYPESCRIPT, TAGS.DOCKER, TAGS.POSTGRESQL],
@@ -68,7 +68,7 @@ const PROJECTS = [
     description:
       "A full-stack job board platform featuring a mobile-first UI inspired by social networks. Includes complex CRUD workflows, real-time filtering, and optimized database queries.",
     github: "https://github.com/gabrielravelo/devjobs",
-    // link: "https://adventjs.dev",
+    link: "",
     image: "/projects/devjobs.webp",
     tags: [TAGS.LARAVEL, TAGS.MYSQL, TAGS.TAILWIND],
   },
@@ -77,7 +77,7 @@ const PROJECTS = [
 
 <div class="flex flex-col gap-y-16">
   {
-    PROJECTS.map(({ image, title, description, tags, github }) => (
+    PROJECTS.map(({ image, title, description, link, tags, github }) => (
     <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
   <div class="w-full md:w-1/2">
     <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
@@ -112,12 +112,12 @@ const PROJECTS = [
               
             </LinkButton>
           )}
-          {/* {link && (
+          {link && (
             <LinkButton href={link}>
               <Link class="size-4" />
               Preview
             </LinkButton>
-          )} */}
+          )}
         </footer>
     </div>
   </div>
