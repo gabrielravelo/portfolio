@@ -4,6 +4,12 @@ import NextJS from "./icons/NextJS.astro"
 import Tailwind from "./icons/Tailwind.astro"
 import Link from "./icons/Link.astro"
 import LinkButton from "./LinkButton.astro"
+import Laravel from "./icons/Laravel.astro"
+import TypeScript from "./icons/TypeScript.astro"
+import Docker from "./icons/Docker.astro"
+import MySQL from "./icons/MySQL.astro"
+import PostgreSQL from "./icons/PostgreSQL.astro"
+import Nest from "./icons/Nest.astro"
 
 const TAGS = {
   NEXT: {
@@ -16,31 +22,62 @@ const TAGS = {
     class: "bg-[#003159] text-white",
     icon: Tailwind,
   },
+  LARAVEL: {
+    name: "Laravel",
+    class: "bg-[#450a0a] text-white",
+    icon: Laravel
+  },
+  TYPESCRIPT: {
+    name: "TypeScript",
+    class: "bg-[#002244] text-white",
+    icon: TypeScript
+  },
+  DOCKER: {
+    name: "Docker",
+    class: "bg-[#003f8c] text-white",
+    icon: Docker
+  },
+  NEST: {
+    name: "NestJS",
+    class: "bg-[#210505] text-white",
+    icon: Nest
+  },
+  POSTGRESQL: {
+    name: "PostgreSQL",
+    class: "bg-[#001f3f] text-white",
+    icon: PostgreSQL
+  },
+  MYSQL: {
+    name: "MySQL",
+    class: "bg-[#003c53] text-white",
+    icon: MySQL
+  }
 }
 const PROJECTS = [
   {
-    title: "SVGL - A beautiful library with SVG logos",
+    title: "Library Management API - Scalable Backend System",
     description:
-      "Biblioteca de logos SVG de las marcas más populares. +10k visitas al mes. +2K svgs descargados. Creado desde cero con Next.js, React y Tailwind CSS.",
-    link: "https://svgl.vercel.app/",
-    github: "https://github.com/pheralb/svgl",
-    image: "/projects/svgl.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+      "A robust REST API featuring Role-Based Access Control (RBAC) and JWT authentication. Implements an Event-Driven architecture for asynchronous tasks and automated Excel reporting. Fully dockerized.",
+    // link: "https://svgl.vercel.app/",
+    github: "https://github.com/gabrielravelo/library-management-api",
+    image: "/projects/library-management.webp",
+    tags: [TAGS.NEST, TAGS.TYPESCRIPT, TAGS.DOCKER, TAGS.POSTGRESQL],
   },
   {
-    title: "AdventJS - Retos de programación con JavaScript y TypeScript",
+    title: "DevJobs - Modern Job Board Platform",
     description:
-      "Plataforma gratuita con retos de programación. Más de 1 millón de visitas en un mes. +50K retos completados. Creada desde cero con Next.js, React y Tailwind CSS.",
-    link: "https://adventjs.dev",
-    image: "/projects/adventjs.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+      "A full-stack job board platform featuring a mobile-first UI inspired by social networks. Includes complex CRUD workflows, real-time filtering, and optimized database queries.",
+    github: "https://github.com/gabrielravelo/devjobs",
+    // link: "https://adventjs.dev",
+    image: "/projects/devjobs.webp",
+    tags: [TAGS.LARAVEL, TAGS.MYSQL, TAGS.TAILWIND],
   },
 ]
 ---
 
 <div class="flex flex-col gap-y-16">
   {
-    PROJECTS.map(({ image, title, description, tags, link, github }) => (
+    PROJECTS.map(({ image, title, description, link, tags, github }) => (
     <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
   <div class="w-full md:w-1/2">
     <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
