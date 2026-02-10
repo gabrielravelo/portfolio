@@ -10,12 +10,13 @@ import Docker from "./icons/Docker.astro"
 import MySQL from "./icons/MySQL.astro"
 import PostgreSQL from "./icons/PostgreSQL.astro"
 import Nest from "./icons/Nest.astro"
+import Vue from "./icons/Vue.astro"
 
 const TAGS = {
-  NEXT: {
-    name: "Next.js",
-    class: "bg-black text-white",
-    icon: NextJS,
+  VUE: {
+    name: "Vue.js",
+    class: "bg-[#234c36] text-white",
+    icon: Vue,
   },
   TAILWIND: {
     name: "Tailwind CSS",
@@ -55,6 +56,15 @@ const TAGS = {
 }
 const PROJECTS = [
   {
+    title: "Sentilyzer",
+    description:
+      "AI-powered sentiment analysis platform built with NestJS, Vue 3, and Google Gemini. Analyze text and web content with detailed metrics, user management, and role-based access control.",
+    link: "",
+    github: "https://github.com/gabrielravelo/sentilyzer-uah",
+    image: "/projects/sentilyzer.webp",
+    tags: [TAGS.NEST, TAGS.VUE, TAGS.TYPESCRIPT, TAGS.DOCKER, TAGS.POSTGRESQL],
+  },
+  {
     title: "Library Management API - Scalable Backend System",
     description:
       "A robust REST API featuring Role-Based Access Control (RBAC) and JWT authentication. Implements an Event-Driven architecture for asynchronous tasks and automated Excel reporting. Fully dockerized.",
@@ -81,7 +91,7 @@ const PROJECTS = [
     <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
   <div class="w-full md:w-1/2">
     <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
-      <img alt="Recién llegado vs 5 años en Nueva Zelanda" class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy" src={image} />
+      <img alt="Project not found" class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy" src={image} />
     </div>
   </div>
 
